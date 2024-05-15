@@ -4,13 +4,14 @@ interface ButtonProps{
     color : string;
     visibility? : boolean;
     border? : string;
-    width? : string
+    width? : string;
+    margin? : string
 }
 
 
-function Button({text, bgColor, color, visibility, border, width} : ButtonProps){
+function Button({text, bgColor, color, visibility, border, width, margin} : ButtonProps){
     return(
-        <button className={`${bgColor} ${color} ${width} ${visibility ? 'hidden sm:block' : null} border-2 ${border} px-4 py-2 font-semibold rounded-md`}>{text}</button>
+        <button className={`${bgColor} ${color} ${margin} ${width} ${visibility ? 'hidden sm:block' : null} border-2 ${border} px-4 py-2 font-semibold rounded-md`}>{text}</button>
     )
 }
 
