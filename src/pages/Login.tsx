@@ -1,7 +1,9 @@
+import Input from "../components/Input"
+
 export default function Login(){
     return(
-        <>
-            <h1>Login</h1>
-        </>
+        <div className="w-full bg-red-50 h-screen-minus-20">
+
+        </div>
     )
 }

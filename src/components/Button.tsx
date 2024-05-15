@@ -3,7 +3,7 @@ interface ButtonProps{
     bgColor : string;
     color : string;
     visibility : boolean;
-    border? : string
+    border : string;
 }
 
 
