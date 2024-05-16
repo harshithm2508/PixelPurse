@@ -5,13 +5,15 @@ interface ButtonProps{
     visibility? : boolean;
     border? : string;
     width? : string;
-    margin? : string
+    margin? : string;
+    onClickFunc? : () => void;
+
 }
 
 
-function Button({text, bgColor, color, visibility, border, width, margin} : ButtonProps){
+function Button({text, bgColor, color, visibility, border, width, margin, onClickFunc} : ButtonProps){
     return(
-        <button className={`${bgColor} ${color} ${margin} ${width} ${visibility ? 'hidden sm:block' : null} border-2 ${border} px-4 py-2 font-semibold rounded-md`}>{text}</button>
+        <button onClick={onClickFunc} className={`${bgColor} ${color} ${margin} ${width} ${visibility ? 'hidden sm:block' : null} border-2 ${border} px-4 py-2 font-semibold rounded-md`}>{text}</button>
     )
 }
 
