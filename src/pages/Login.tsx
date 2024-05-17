@@ -15,7 +15,7 @@ export default function Login(){
 
                 <div className="mt-8 w-full">
                     <div className="text-md font-semibold">Password</div>
-                    <Input inputType="text" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
+                    <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
                 </div>
                 <div className="mt-42font-semibold text-gray-500 mb-4">Forgot your password ?</div>
                 <Button text="Login" bgColor="bg-blue-700" color="text-white" width="w-full sm:w-9/12 md:w-8/12"/>

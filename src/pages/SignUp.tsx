@@ -28,7 +28,7 @@ export default function SignUp(){
 
                 <div className="mt-6 w-full">
                     <div className="text-md font-semibold">Password</div>
-                    <Input inputType="text" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
+                    <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
                 </div>
                 <Button text="Sign Up" margin="mt-6" bgColor="bg-blue-700" color="text-white" width="w-full sm:w-9/12 md:w-8/12"/>
                 <div className="text-center">OR</div>
