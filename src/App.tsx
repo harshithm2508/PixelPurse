@@ -5,11 +5,13 @@ import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Wallet from './pages/Wallet'
 import LandingPage from './pages/LandingPage'
+import { RecoilRoot } from 'recoil'
 
 
 function App() {
   return(
     <>
+      <RecoilRoot>
       <BrowserRouter>
       <Navbar/>
         <Routes>
@@ -20,6 +22,7 @@ function App() {
           <Route path='/wallet' element={<Wallet/>}></Route>
         </Routes>
       </BrowserRouter>
+      </RecoilRoot>
     </>
   )
 }

@@ -1,16 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
-import { useState } from "react";
+import { UserLogin } from "../state/atoms/AuthenState";
+import { useRecoilState } from "recoil";
 
 function Navbar(){
 
     const navigate = useNavigate();
-    const [ loggedIn, setLogin] = useState(true);
+    const [ loggedIn, setLogin] = useRecoilState(UserLogin);
+    
 
     return(
         <div className="h-20 flex w-full items-center pl-5 sm:pl-24 pr-10 sm:pr-40 justify-between">
             <div className=" font-medium text-2xl text-blue-700 cursor-pointer" onClick={()=>{loggedIn ? navigate('/dashboard') : navigate('/')}}>PixelPurse</div>
             {(!loggedIn) ? <LoggedOutNavbar/> : <LoggedInNavbar/>}
+            <button onClick={()=>{setLogin(true)}}>login</button>
         </div>      
     )
 }
