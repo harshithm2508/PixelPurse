@@ -7,26 +7,26 @@ import { Link } from "react-router-dom"
 export default function SignUp(){
     return(
         <div className="w-full h-screen-minus-20 flex justify-center">
-            <div className="sm:w-1/2 min-w-0.5 h-1/2 mt-14 sm:mt-0">
+            <div className="sm:w-1/2 min-w-0.5 h-1/2 mt-6 sm:mt-0">
                 <div className=" text-2xl font-semibold">Welcome to <span className=" text-blue-700">PixelPurse</span></div>
                 <div className="text-md font-medium text-gray-500">Create a <span className="text-blue-700">PixelPurse</span> account</div>
 
-                <div className="mt-6 w-full">
+                <div className="mt-4 w-full">
                     <div className="text-md font-semibold">First Name</div>
                     <Input inputType="text" placeholder="John" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
                 </div>
 
-                <div className="mt-6 w-full">
+                <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Last Name</div>
                     <Input inputType="text" placeholder="Doe" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
                 </div>
 
-                <div className="mt-6 w-full">
+                <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Email or Username</div>
                     <Input inputType="text" placeholder="example@mail.com" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
                 </div>
 
-                <div className="mt-6 w-full">
+                <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Password</div>
                     <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
                 </div>
