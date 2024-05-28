@@ -21,7 +21,7 @@ function LandingPage() {
             <div className=" w-full h-auto lg:h-screen px-6 sm:px-16 pt-12">
                     <div className=" text-left text-5xl font-extrabold">Why use <span className="text-blue-700">PixelPurse</span> Wallet?</div>
                     <div className="mt-8  sm:w-3/4 text-xl sm:text-2xl font-normal">Whether you are splitting a bill, buying a group gift, chipping in for a present, you can add a note to your payment to let the recipient know what it's for. You can also request money from multiple people at once.</div>
-                    <div className=" mt-20 flex flex-row flex-wrap lg:flex-nowrap gap-16">
+                    <div className=" mt-6 sm:mt-20 flex flex-row flex-wrap lg:flex-nowrap gap-16">
                         <FeatureImage text="Your money is safe with us. We use the latest security features and encryption technology to keep your information secure." imagePath="src\images\PixelPurse Secure Lock.jpg"/>
                         <FeatureImage text="Our app is easy to use and navigate. Easily check your balance and send money using mobile number or phone number." imagePath="src\images\Easy to use.jpg"/>
                         <FeatureImage text="Need to send money in hurry? No problem. We offer fast transfers so you can get your money where it needs to go quickly." imagePath="src\images\Fast Transactions.jpg"/>
