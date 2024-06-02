@@ -7,9 +7,9 @@ import { Link } from "react-router-dom"
 export default function SignUp(){
     return(
         <div className="w-full h-screen-minus-20 flex justify-center">
-            <div className="sm:w-1/2 min-w-0.5 h-1/2 mt-6 sm:mt-0">
+            <div className="sm:w-1/2 min-w-0.5 h-1/2 mt-8">
                 <div className=" text-2xl font-semibold">Welcome to <span className=" text-blue-700">PixelPurse</span></div>
-                <div className="text-md font-medium text-gray-500">Create a <span className="text-blue-700">PixelPurse</span> account</div>
+                <div className="text-md font-medium text-gray-500">Create your <span className="text-blue-700">PixelPurse</span> account</div>
 
                 <div className="mt-4 w-full">
                     <div className="text-md font-semibold">First Name</div>
