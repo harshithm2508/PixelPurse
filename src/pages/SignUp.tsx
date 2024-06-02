@@ -31,9 +31,9 @@ export default function SignUp(){
                     <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
                 </div>
                 <Button text="Sign Up" margin="mt-6" bgColor="bg-blue-700" color="text-white" width="w-full sm:w-9/12 md:w-8/12"/>
-                <div className="text-center">OR</div>
+                <div className=" w-full sm:w-9/12 md:w-8/12 text-center font-bold text-gray-500 text-sm my-2">(OR)</div>
                 <Button text="Connect with Google" bgColor="bg-gray-200" color="text-gray-900" width="w-full sm:w-9/12 md:w-8/12"/>
-                <div className="mt-4 font-semibold text-center text-gray-500 mb-4">Already have an account ? <Link className=" text-blue-800" to={'/login'}>Login</Link></div>
+                <div className="mt-4 w-full sm:w-9/12 md:w-8/12 text-center font-semibold text-gray-500 mb-4">Already have an account ? <Link className=" text-blue-800" to={'/login'}>Login</Link></div>
                 
             </div>
         </div>
