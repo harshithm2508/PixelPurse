@@ -28,7 +28,7 @@ function LandingPage() {
 
             {/* {How it works} */}
             
-            <div className="w-full h-screen sm:h-50vh-screen px-4 sm:px-16 mb-5 pt-12">
+            <div className="w-full h-auto lg:h-50vh-screen px-4 sm:px-16 mb-5 pt-12">
                 <div className=" text-5xl font-extrabold">How it works ?</div>
                 {/* Explaining working */}
                 <div className="flex flex-col sm:flex-row gap-6 mt-10">
@@ -44,7 +44,7 @@ function LandingPage() {
             </div>
 
 
-            <div className="h-50vh-screen grid grid-cols-2">
+            <div className=" h-screen md:h-50vh-screen grid md:grid-cols-2">
                 <div className="bg-hero bg-cover bg-no-repeat bg-center"></div>
                 <div className=" bg-gradient-to-r from-blue-500 to-blue-950 flex flex-col justify-center items-start px-20">
                     <div className=" text-4xl text-white">Pay it the way you want</div>
