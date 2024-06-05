@@ -32,7 +32,7 @@ export default function Dashboard(){
                     <div className="text-base font-medium text-gray-500">Use your bank account or debit card to add money to your <span className="text-blue-700">PixelPurse</span> wallet</div>
                 </div>
                 <div>
-                    <Button bgColor="bg-blue-700" text="Add money" color="text-white"/>
+                    <Button bgColor="bg-blue-500" text="Add money" color="text-white" border=" rounded-lg border-blue-500"/>
                 </div>
             </div>
             

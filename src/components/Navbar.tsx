@@ -21,8 +21,8 @@ function LoggedOutNavbar(){
     const navigate = useNavigate();
     return(
         <div className="flex gap-6">
-            <Button text="Login" onClickFunc={()=>{navigate('/login');}} bgColor="bg-white" color="text-black" visibility={false} border="border-blue-500"/>
-            <Button text="Sign Up" onClickFunc={()=>{navigate('/signup');}} bgColor="bg-blue-500" color="text-white" visibility={true} border="border-blue-500"/>
+            <Button text="Login" onClickFunc={()=>{navigate('/login');}} bgColor="bg-white" color="text-black" visibility={false} border="border-blue-500  rounded-md"/>
+            <Button text="Sign Up" onClickFunc={()=>{navigate('/signup');}} bgColor="bg-blue-500" color="text-white" visibility={true} border="border-blue-500  rounded-md"/>
         </div>
     )
 }
