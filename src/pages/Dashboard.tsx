@@ -39,10 +39,10 @@ export default function Dashboard(){
                 </div>
             </div>
             
-            <div className=" mt-5 font-comfortaa text-2xl"> Recent transactions</div>
+            <div className=" mt-10 mb-2 font-semibold text-2xl"> Recent transactions</div>
             <div className=" w-full">
                 {transactionsData.map((x) => (
-                <TransactionsList amount={x.amount} name={x.name} process={x.process} />))}
+                <TransactionsList amount={x.amount} name={x.name} process={x.process} date={x.date} />))}
             </div>
         </div>
     )
