@@ -1,6 +1,7 @@
 import { useRecoilState, useRecoilValue } from "recoil"
 import { userData } from "../state/atoms/UserInfo"
 import { WalletBalance, TotalTransactions } from "../state/atoms/MonetaryState";
+import { AmountDisplay } from "../components/AmountDisplay";
 
 export default function Dashboard(){
 
@@ -16,16 +17,12 @@ export default function Dashboard(){
             <div className=" mt-10 text-5xl text font-good">Welcome back, {first_name}</div>
 
             {/* Total Transactions and Wallet balance */}
-            <div className=" mt-5 w-full flex gap-2 text-center">
+            <div className=" mt-5 w-full flex flex-wrap gap-10 text-center">
                 {/* Wallet Balance  */}
-                <div className=" w-1/2 min-w-44 border-2 border-gray-300 rounded-lg ">
-                    <div className=" font-bold text-2xl"><span>&#8377;</span>  {walletBal}</div>
-                    <div className=" text-base font-medium text-gray-500">Current Balance</div>
-                </div>
-                <div className=" w-1/2 min-w-44 border-2 border-gray-300 rounded-lg ">
-                    <div className=" font-bold text-2xl"><span>&#8377;</span>  {totalTransactions}</div>
-                    <div className=" text-base font-medium text-gray-500">Total Transactions</div>
-                </div>
+                <AmountDisplay amount={walletBal} description="Current Balance"/>
+                <AmountDisplay amount={totalTransactions} description="Total Transactions"/>
+
+
             </div>
 
 
