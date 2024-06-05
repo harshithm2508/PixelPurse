@@ -31,8 +31,8 @@ function LoggedInNavbar(){
     const navigate = useNavigate();
     return(
         <div className="flex gap-6">
-            <Button text="Home" onClickFunc={()=>{navigate('/wallet');}} bgColor="bg-white" color="text-black" visibility={false} border="border-white"/>
-            <Button text="Wallet" onClickFunc={()=>{navigate('/dashboard');}} bgColor="bg-white" color="text-black" visibility={true} border="border-white"/>
+            <Button text="Home" onClickFunc={()=>{navigate('/dashboard');}} bgColor="bg-white" color="text-black" visibility={false} border="border-white"/>
+            <Button text="Wallet" onClickFunc={()=>{navigate('/wallet');}} bgColor="bg-white" color="text-black" visibility={true} border="border-white"/>
             <Button text="My Profile" onClickFunc={()=>{navigate('/dashboard');}} bgColor="bg-white" color="text-black" visibility={true} border="border-white"/>
         </div>
     )
