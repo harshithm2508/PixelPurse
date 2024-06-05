@@ -1,7 +1,9 @@
 import { useRecoilState, useRecoilValue } from "recoil"
 import { userData } from "../state/atoms/UserInfo"
 import { WalletBalance, TotalTransactions } from "../state/atoms/MonetaryState";
+import { Transactions } from "../state/atoms/MonetaryState";
 import { AmountDisplay } from "../components/AmountDisplay";
+import { TransactionsList } from "../components/Transaction";
 import Button from "../components/Button";
 
 export default function Dashboard(){
@@ -9,6 +11,7 @@ export default function Dashboard(){
     const userdata  = useRecoilValue(userData);
     const [ walletBal, setWalletBal ] = useRecoilState(WalletBalance);
     const [ totalTransactions, setTotalTransactions ] = useRecoilState(TotalTransactions);
+    const transactionsData = useRecoilValue(Transactions);
     const first_name = userdata.firstName;
 
     return(
@@ -18,7 +21,7 @@ export default function Dashboard(){
             <div className=" mt-10 text-5xl text font-good">Welcome back, {first_name}</div>
 
             {/* Total Transactions and Wallet balance */}
-            <div className=" mt-5 w-full flex flex-wrap text-center">
+            <div className=" mt-5 h-20 w-full flex flex-wrap text-center">
                 {/* Wallet Balance  */}
                 <AmountDisplay amount={walletBal} description="Current Balance"/>
                 <AmountDisplay amount={totalTransactions} description="Total Transactions"/>
@@ -36,7 +39,11 @@ export default function Dashboard(){
                 </div>
             </div>
             
-            <div> Recent transactions</div>
+            <div className=" mt-5 font-comfortaa text-2xl"> Recent transactions</div>
+            <div className=" w-full">
+                {transactionsData.map((x) => (
+                <TransactionsList amount={x.amount} name={x.name} process={x.process} />))}
+            </div>
         </div>
     )
 }
