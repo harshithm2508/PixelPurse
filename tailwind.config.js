@@ -11,6 +11,9 @@ export default {
       },
       backgroundImage : {
         'hero' : "url('https://th.bing.com/th/id/OIG4..pQ_frM4AwSbwqacR1RD?pid=ImgGn')"
+      },
+      fontFamily : {
+        'good' : ['Carter One']
       }
     },
   },
