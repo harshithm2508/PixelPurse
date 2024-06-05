@@ -44,12 +44,17 @@ function LandingPage() {
             </div>
 
 
-            <div className=" h-screen md:h-50vh-screen grid md:grid-cols-2">
+            <div className=" h-screen md:h-50vh-screen grid lg:grid-cols-2">
                 <div className="bg-hero bg-cover bg-no-repeat bg-center"></div>
-                <div className=" bg-gradient-to-r from-blue-500 to-blue-950 flex flex-col justify-center items-start px-20">
+                <div className=" bg-gradient-to-r from-blue-500 to-blue-950 flex flex-col py-10 text-center justify-center  sm:items-start sm:px-20">
                     <div className=" text-4xl text-white">Pay it the way you want</div>
                     <div className=" font-medium text-lg text-white mt-5">Link all your credit and debit cards and choose which one to use at checkout. Shopping online has never been this easy</div>
                 </div>
+            </div>
+
+
+            <div className=" h-auto bg-white">
+                
             </div>
 
 

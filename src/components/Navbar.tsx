@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
-import { UserLogin } from "../state/atoms/AuthenState";
+import { UserLoggedIn } from "../state/atoms/AuthenState";
 import { useRecoilState } from "recoil";
 
 function Navbar(){
 
     const navigate = useNavigate();
-    const [ loggedIn, setLogin] = useRecoilState(UserLogin);
+    const [ loggedIn, setLoggedIn] = useRecoilState(UserLoggedIn);
     
 
     return(
