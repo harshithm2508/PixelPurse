@@ -15,13 +15,13 @@ export default function Dashboard(){
     const first_name = userdata.firstName;
 
     return(
-        <div className=" h-screen-minus-20 flex flex-col items-start px-4 sm:px-10 md:px-16 lg:px-20 xl:px-30 2xl:px-40">
+        <div className=" h-screen-minus-20 flex flex-col items-start px-2 sm:px-10 md:px-16 lg:px-20 xl:px-30 2xl:px-40">
 
             {/* Greeting User */}
             <div className=" mt-10 text-5xl text font-good">Welcome back, {first_name}</div>
 
             {/* Total Transactions and Wallet balance */}
-            <div className=" mt-5 h-20 w-full flex flex-wrap text-center">
+            <div className=" mt-5 h-20 w-full flex flex-col sm:flex-row text-center">
                 {/* Wallet Balance  */}
                 <AmountDisplay amount={walletBal} description="Current Balance"/>
                 <AmountDisplay amount={totalTransactions} description="Total Transactions"/>
