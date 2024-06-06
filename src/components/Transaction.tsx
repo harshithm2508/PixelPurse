@@ -17,7 +17,7 @@ export function TransactionsList({name, process, amount, date} : TransactionsPro
                     <div className=" text-gray-400 text-sm font-semibold">{date}</div>
                 </div>
             </div>
-            {process == 'sent' ? <div className=" text-red-600 font-semibold"> <span>&#8377;</span> {amount}</div> : <div className=" text-green-500 font-semibold"> <span>&#8377;</span> {amount}</div>}
+            {process == 'sent' ? <div className=" text-red-600 text-center font-semibold"> <span>&#8377;</span> {amount}</div> : <div className=" text-green-500 text-center font-semibold"> <span>&#8377;</span> {amount}</div>}
         </div>
     )
 }

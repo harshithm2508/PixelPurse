@@ -18,10 +18,10 @@ export default function Dashboard(){
         <div className=" h-screen-minus-20 flex flex-col items-start px-2 sm:px-10 md:px-16 lg:px-20 xl:px-30 2xl:px-40">
 
             {/* Greeting User */}
-            <div className=" mt-10 text-5xl text font-good">Welcome back, {first_name}</div>
+            <div className=" mt-4 sm:mt-10 text-5xl text font-good">Welcome back, {first_name}</div>
 
             {/* Total Transactions and Wallet balance */}
-            <div className=" mt-5 h-20 w-full flex flex-col sm:flex-row text-center">
+            <div className=" mt-5 h-20 w-full flex flex-col gap-5 sm:flex-row text-center">
                 {/* Wallet Balance  */}
                 <AmountDisplay amount={walletBal} description="Current Balance"/>
                 <AmountDisplay amount={totalTransactions} description="Total Transactions"/>
@@ -29,7 +29,7 @@ export default function Dashboard(){
 
 
             {/* Add Money  */}
-            <div className=" mt-5 w-full border-2 border-gray-300 px-5 py-2 flex justify-between items-center rounded-lg">
+            <div className=" mt-20 sm:mt-5 w-full border-2 border-gray-300 px-5 py-2 flex flex-col-reverse sm:flex-row justify-between items-center rounded-lg">
                 <div>
                     <div className=" font-bold">Add Money</div>
                     <div className="text-base font-medium text-gray-500">Use your bank account or debit card to add money to your <span className="text-blue-700">PixelPurse</span> wallet</div>
