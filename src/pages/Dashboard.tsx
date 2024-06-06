@@ -15,7 +15,7 @@ export default function Dashboard(){
     const first_name = userdata.firstName;
 
     return(
-        <div className=" h-screen-minus-20 flex flex-col items-start px-40">
+        <div className=" h-screen-minus-20 flex flex-col items-start px-4 sm:px-10 md:px-16 lg:px-20 xl:px-30 2xl:px-40">
 
             {/* Greeting User */}
             <div className=" mt-10 text-5xl text font-good">Welcome back, {first_name}</div>
