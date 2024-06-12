@@ -2,6 +2,7 @@ import Button from "../components/Button";
 import { AmountDisplay } from "../components/AmountDisplay";
 import { WalletBalance, TotalTransactions } from "../state/atoms/MonetaryState";
 import { useRecoilState } from "recoil";
+import QuickActionBar from "../components/QuickActionBar";
 
 export default function Wallet(){
 
@@ -48,10 +49,10 @@ export default function Wallet(){
                     {/* Quick Actions Section */}
                     <div className=" w-2/5 p-5 border-gray-300 border-2 rounded-lg">
                         <div className=" font-bold text-lg">Quick Actions</div>
-                        <div className=" mt-2">Pay or Request</div>
-                        <div className=" mt-2">Invite Friends</div>
-                        <div className=" mt-2">Get paid</div>
-                        <div className=" mt-2">Transfer to bank</div>
+                        <QuickActionBar title="Pay or Request"/>                        
+                        <QuickActionBar title="Invite Friends"/>                        
+                        <QuickActionBar title="Get paid"/>                        
+                        <QuickActionBar title="Transfer to bank"/>                        
                     </div>
                     <div className=" w-2/5 p-5 border-gray-300 border-2 rounded-lg">
                         
