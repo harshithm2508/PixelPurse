@@ -3,6 +3,7 @@ import { AmountDisplay } from "../components/AmountDisplay";
 import { WalletBalance, TotalTransactions } from "../state/atoms/MonetaryState";
 import { useRecoilState } from "recoil";
 import QuickActionBar from "../components/QuickActionBar";
+import PaymentOption from "../components/PaymentOptions";
 
 export default function Wallet(){
 
@@ -59,6 +60,9 @@ export default function Wallet(){
                     {/* Payment Methods  */}
                     <div className=" w-2/5 p-5 border-gray-300 border-2 rounded-lg">
                         <div className=" font-bold text-lg">Payment Methods</div>
+                        <PaymentOption nameOfCard="Mastercard" cardNumber="5142"/>
+                        <PaymentOption nameOfCard="Visa" cardNumber="1843"/>
+                        <Button text="Manage Payment Options" bgColor="bg-gray-200" color="black" border="rounded-xl" margin=" mt-2"/>
                     </div>
                 </div>
 
