@@ -54,8 +54,11 @@ export default function Wallet(){
                         <QuickActionBar title="Get paid"/>                        
                         <QuickActionBar title="Transfer to bank"/>                        
                     </div>
+
+
+                    {/* Payment Methods  */}
                     <div className=" w-2/5 p-5 border-gray-300 border-2 rounded-lg">
-                        
+                        <div className=" font-bold text-lg">Payment Methods</div>
                     </div>
                 </div>
 
