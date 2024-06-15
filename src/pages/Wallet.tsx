@@ -14,18 +14,18 @@ export default function Wallet(){
 
 
     return(
-        <div className=" w-full h-screen-minus-20 bg-blue-500 flex justify-center items-center">
-            <div className=" w-4/5 h-5/6 px-10 py-3 bg-white rounded-xl">
+        <div className=" w-full h- bg-white sm:bg-blue-500 flex justify-center items-center">
+            <div className=" w-full sm:w-4/5 h-full sm:h-auto px-10 py-3 bg-white rounded-xl flex flex-col gap-5">
 
                 {/* Introduction to wallet and button to check your transactions */}
                 <div className=" flex justify-between">
                     <div className=" font-bold text-2xl flex items-center">Your Wallet</div>
-                    <Button text="See your transactions" bgColor="bg-gray-200" color="black" border="rounded-xl"/>
+                    <Button text="See your transactions" bgColor="bg-gray-200" color="black" border="rounded-xl" misc=" hidden sm:visible"/>
                 </div>
 
 
                 {/* Displaying current wallet balance and transactions */}
-                <div className=" mt-5 h-20 w-full flex flex-col gap-5 sm:flex-row text-center">
+                <div className=" h-auto w-full flex flex-col gap-5 sm:flex-row text-center">
                     {/* Wallet Balance  */}
                     <AmountDisplay amount={walletBal} description="Current Balance"/>
                     <AmountDisplay amount={totalTransactions} description="Total Transactions"/>
@@ -33,7 +33,7 @@ export default function Wallet(){
 
 
                 {/* Adding Funds */}
-                <div className=" mt-20 sm:mt-5 w-full border-2 border-gray-300 px-5 py-2 flex flex-col-reverse sm:flex-row justify-between items-center rounded-lg">
+                <div className="w-full border-2 border-gray-300 px-5 py-4 flex flex-col-reverse sm:flex-row items-center sm:justify-center gap-5 rounded-lg">
                     <div>
                         <div className=" font-bold">Add Money</div>
                         <div className="text-base font-medium text-gray-500">Use your bank account or debit card to add money to your <span className="text-blue-700">PixelPurse</span> wallet</div>
@@ -45,10 +45,10 @@ export default function Wallet(){
 
 
                 {/* Quick Actions and Payment Methods section  */}
-                <div className=" h-auto w-full mt-5 border-blue-500 flex gap-8">
+                <div className=" h-auto w-full border-blue-500 flex flex-col sm:flex-row gap-8">
 
                     {/* Quick Actions Section */}
-                    <div className=" w-2/5 p-5 border-gray-300 border-2 rounded-lg">
+                    <div className=" w-full sm:w-2/5 p-5 border-gray-300 border-2 rounded-lg">
                         <div className=" font-bold text-lg">Quick Actions</div>
                         <QuickActionBar title="Pay or Request"/>                        
                         <QuickActionBar title="Invite Friends"/>                        
@@ -58,7 +58,7 @@ export default function Wallet(){
 
 
                     {/* Payment Methods  */}
-                    <div className=" w-2/5 p-5 border-gray-300 border-2 rounded-lg">
+                    <div className=" w-full sm:w-2/5 p-5 border-gray-300 border-2 rounded-lg">
                         <div className=" font-bold text-lg">Payment Methods</div>
                         <PaymentOption nameOfCard="Mastercard" cardNumber="5149"/>
                         <PaymentOption nameOfCard="Visa" cardNumber="1753"/>
