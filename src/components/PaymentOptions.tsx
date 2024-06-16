@@ -6,7 +6,7 @@ interface PaymentOptionProps{
 export default function PaymentOption({nameOfCard, cardNumber} : PaymentOptionProps){
     return(
         <div className=" border-b-2 rounded-lg pr-4 xl:pr-14 2xl:pr-18 pt-2 pl-4 pb-2 mb-2 flex justify-between">
-            <div className=" flex gap-4 lg:gap-10">
+            <div className=" flex gap-4 lg:gap-10 font-medium text-gray-600 text-lg">
                 <div>{nameOfCard}</div>
                 <div>{cardNumber}</div>
             </div>
@@ -14,6 +14,5 @@ export default function PaymentOption({nameOfCard, cardNumber} : PaymentOptionPr
         </div>
     )
 }
-
 
 
