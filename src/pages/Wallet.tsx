@@ -15,7 +15,7 @@ export default function Wallet(){
 
     return(
         <div className=" w-full sm:h-auto lg:h-screen-minus-20 bg-white lg:bg-blue-500 flex justify-center items-center">
-            <div className=" w-full lg:w-4/5 2xl:w-4/5 2xl:h-5/6 lg:p-8 h-full sm:h-auto px-10 py-3 bg-white rounded-xl flex flex-col gap-5 2xl:justify-between">
+            <div className=" w-full lg:w-4/5 2xl:w-4/5 lg:p-8 h-full sm:h-auto px-10 py-3 bg-white rounded-xl flex flex-col gap-5 2xl:justify-between">
 
                 {/* Introduction to wallet and button to check your transactions */}
                 <div className=" flex justify-between flex-wrap">
