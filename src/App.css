@@ -1,6 +1,0 @@
-@layer utilities {
-    .h-screen-minus-20 {
-      height: calc(100vh - 5rem); /* 5rem is equivalent to h-20 */
-    }
-  }
-  
