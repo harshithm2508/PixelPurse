@@ -5,9 +5,11 @@
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
+    "@harshithm2508/pixelpurse-common": "^3.0.0",
     "@prisma/client": "^5.15.1",
     "@prisma/extension-accelerate": "^1.1.0",
-    "hono": "^4.4.7"
+    "hono": "^4.4.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240529.0",
