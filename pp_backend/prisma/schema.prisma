@@ -33,12 +33,12 @@ model Card{
   cardNumber Int @unique
   nameOnCard String
   expiryDate DateTime
-  expiryMonth DateTime
+  expiryTime DateTime
   transactions Transaction[]
 }
 
 model Transaction{
-  id String @id @default(uuid()) @unique
+  id String @id @default(uuid())
   sentBy User @relation(name: "Sender Transactions",fields: [senderId],references: [id])
   receivedBy User @relation(name: "Receiver Transactions",fields: [receiverId],references: [id])
   senderId String

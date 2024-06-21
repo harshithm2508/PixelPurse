@@ -18,7 +18,7 @@ CREATE TABLE "Card" (
     "cardNumber" INTEGER NOT NULL,
     "nameOnCard" TEXT NOT NULL,
     "expiryDate" TIMESTAMP(3) NOT NULL,
-    "expiryMonth" TIMESTAMP(3) NOT NULL,
+    "expiryTime" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "Card_pkey" PRIMARY KEY ("id")
 );
@@ -40,9 +40,6 @@ CREATE UNIQUE INDEX "User_username_key" ON "User"("username");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Card_cardNumber_key" ON "Card"("cardNumber");
-
--- CreateIndex
-CREATE UNIQUE INDEX "Transaction_id_key" ON "Transaction"("id");
 
 -- AddForeignKey
 ALTER TABLE "Card" ADD CONSTRAINT "Card_cardOwner_fkey" FOREIGN KEY ("cardOwner") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
