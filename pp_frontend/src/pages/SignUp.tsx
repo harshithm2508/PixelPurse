@@ -27,6 +27,11 @@ export default function SignUp(){
                 </div>
 
                 <div className="mt-4 w-full">
+                    <div className="text-md font-semibold">Mobile Number</div>
+                    <Input inputType="text" placeholder="+91 9999999999" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
+                </div>
+
+                <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Password</div>
                     <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
                 </div>
