@@ -1,10 +1,40 @@
 import Input from "../components/Input"
 import Button from "../components/Button"
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
 
 
 export default function SignUp(){
+
+    const [username, setUsername] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [mobileNumber, setMobileNumber] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFirstName(e.target.value);
+    };
+
+    const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setLastName(e.target.value);
+    };
+
+    const handleUsername = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setUsername(e.target.value);
+    };
+
+    const handleMobileNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setMobileNumber(e.target.value);
+    };
+
+    const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPassword(e.target.value);
+    };
+    
+    
+
     return(
         <div className="w-full h-screen-minus-20 flex justify-center">
             <div className="sm:w-1/2 min-w-0.5 h-1/2 mt-8">
@@ -13,28 +43,34 @@ export default function SignUp(){
 
                 <div className="mt-4 w-full">
                     <div className="text-md font-semibold">First Name</div>
-                    <Input inputType="text" placeholder="John" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
+                    <Input inputType="text" placeholder="John" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100" onChangeFunc={handleFirstNameChange}/>
                 </div>
+                {firstName}
 
                 <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Last Name</div>
-                    <Input inputType="text" placeholder="Doe" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
+                    <Input inputType="text" placeholder="Doe" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100" onChangeFunc={handleLastNameChange}/>
                 </div>
+                {lastName}
 
                 <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Email or Username</div>
-                    <Input inputType="text" placeholder="example@mail.com" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
+                    <Input inputType="text" placeholder="example@mail.com" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100" onChangeFunc={handleUsername}/>
                 </div>
+                {username}
 
                 <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Mobile Number</div>
-                    <Input inputType="text" placeholder="+91 9999999999" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
+                    <Input inputType="text" placeholder="+91 9999999999" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100" onChangeFunc={handleMobileNumberChange}/>
                 </div>
+                {mobileNumber}
 
                 <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Password</div>
-                    <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100"/>
+                    <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100" onChangeFunc={handlePasswordChange}/>
                 </div>
+                {password}
+
                 <Button text="Sign Up" margin="mt-6" bgColor="bg-blue-700" color="text-white" width="w-full sm:w-9/12 md:w-8/12"/>
                 <div className=" w-full sm:w-9/12 md:w-8/12 text-center font-bold text-gray-500 text-sm my-2">(OR)</div>
                 <Button text="Connect with Google" bgColor="bg-gray-200" color="text-gray-900" width="w-full sm:w-9/12 md:w-8/12"/>
