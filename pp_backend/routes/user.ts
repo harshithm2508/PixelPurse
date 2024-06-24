@@ -45,7 +45,7 @@ userRouter.post('/signup',async (c)=>{
         }
 
         const jwtToken = await sign(jwtPayload,c.env.mySecretKey);
-        sessionStorage.setItem("JWT_TOKEN",jwtToken);
+        localStorage.setItem("JWT_TOKEN",jwtToken);
 
 
         return c.json({'message' : "user successfully signed up"})
