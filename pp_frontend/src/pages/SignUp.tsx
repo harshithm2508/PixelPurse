@@ -2,6 +2,7 @@ import Input from "../components/Input"
 import Button from "../components/Button"
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import axios from "axios"
 
 
 
@@ -32,6 +33,16 @@ export default function SignUp(){
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value);
     };
+
+    const signupDetailsSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+        const data = await axios.post("http://localhost:8787/api/v1/user/signup",{
+            username,
+            firstName,
+            lastName,
+            mobileNumber,
+            password
+        })
+    }
     
     
 
@@ -67,11 +78,11 @@ export default function SignUp(){
 
                 <div className="mt-4 w-full">
                     <div className="text-md font-semibold">Password</div>
-                    <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" height=" h-10" bgColor="bg-gray-100" onChangeFunc={handlePasswordChange}/>
+                    <Input inputType="password" placeholder="" width="w-full sm:w-9/12 md:w-8/12" onChangeFunc={handlePasswordChange} height=" h-10" bgColor="bg-gray-100"/>
                 </div>
                 {password}
 
-                <Button text="Sign Up" margin="mt-6" bgColor="bg-blue-700" color="text-white" width="w-full sm:w-9/12 md:w-8/12"/>
+                <Button text="Sign Up" margin="mt-6" bgColor="bg-blue-700" color="text-white" width="w-full sm:w-9/12 md:w-8/12" onClickFunc={signupDetailsSubmit}  />
                 <div className=" w-full sm:w-9/12 md:w-8/12 text-center font-bold text-gray-500 text-sm my-2">(OR)</div>
                 <Button text="Connect with Google" bgColor="bg-gray-200" color="text-gray-900" width="w-full sm:w-9/12 md:w-8/12"/>
                 <div className="mt-4 w-full sm:w-9/12 md:w-8/12 text-center font-semibold text-gray-500 mb-4">Already have an account ? <Link className=" text-blue-800" to={'/login'}>Login</Link></div>

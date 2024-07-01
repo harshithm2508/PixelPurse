@@ -3,13 +3,16 @@ import { signUpInput } from "@harshithm2508/pixelpurse-common";
 import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { decode,sign, verify } from "hono/jwt";
+import { cors } from "hono/cors";
 
 export const userRouter = new Hono<{
     Bindings : {
-        DATABASE_URL : string
+        DATABASE_URL : string;
         mySecretKey : string
     }
 }>()
+
+userRouter.use(cors())
 
 userRouter.post('/signup',async (c)=>{
 
@@ -43,15 +46,10 @@ userRouter.post('/signup',async (c)=>{
             username : body.username,
             firstName : body.firstName
         }
-
-        const jwtToken = await sign(jwtPayload,c.env.mySecretKey);
-        localStorage.setItem("JWT_TOKEN",jwtToken);
-
-
-        return c.json({'message' : "user successfully signed up"})
+        return c.json({'message' : "User successfully signed up"})
     }catch(e){
         return c.json({
-            'error' : e
+            'error' : "Unable to create the user"
         })
     }
 })
