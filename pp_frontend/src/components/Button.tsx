@@ -6,7 +6,7 @@ interface ButtonProps{
     border? : string;
     width? : string;
     margin? : string;
-    onClickFunc? : () => void;
+    onClickFunc? : (event: React.MouseEvent<HTMLButtonElement>) => void;
     misc? : string;
 }
 
